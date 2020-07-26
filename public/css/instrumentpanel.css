@@ -11,6 +11,24 @@ body {
  border-color: var(--border-color);
 }
 
+:-webkit-full-screen body,
+:-moz-full-screen body,
+:-ms-fullscreen body,
+:full-screen body,
+:fullscreen body {
+ width: 100vw;
+ height: 100vh;
+}
+
+::backdrop,
+::-ms-backdrop {
+ /* Custom styles */
+}
+
+.widget-full-screen {
+ position: absolute;
+}
+
 .react-grid-layout {
  position: relative;
  transition: height 200ms ease;
@@ -167,6 +185,16 @@ body {
 
 .widget-clickme {
  z-index: -1;
+ width: 18px;
+ height: 18px;
+ top: 0px;
+ left: 0px;
+ display: inline;
+ position: fixed;
+ background-color: initial;
+}
+
+.widget-clickme2 {
  width: 18px;
  height: 18px;
  top: 0px;
